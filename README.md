@@ -17,7 +17,7 @@ Automated **flow cytometry analysis engine** with reproducible preprocessing, co
   - Cell/Debris separation based on FSC/SSC density  
 - **Visualization**
   - Density & contour plots (1D, 2D)  
-  - Marker expression comparisons (X vs Y plots)  
+  - Marker expression comparisons UMAP  
   - Overlay of cluster labels and uncertainty regions  
 - **Modular Architecture**
   - Ready for integration with ML pipelines  

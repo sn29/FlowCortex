@@ -25,10 +25,7 @@ Automated **flow cytometry analysis engine** with reproducible preprocessing, co
   - Deployment-friendly structure  
 
 Roadmap
-Add longitudinal batch effect modeling
-Bayesian posterior scoring for uncertain gates
-Integration with FlowSOM/UMAP embeddings
-Web-based UI for interactive gating
+Add longitudinal batch effect modeling; Bayesian posterior scoring for uncertain gate; Integration with FlowSOM/UMAP embeddings; Web-based UI for interactive gating
 
 Contributing
 Pull requests are welcome! Please open an issue first to discuss what you’d like to change.

@@ -24,52 +24,14 @@ Automated **flow cytometry analysis engine** with reproducible preprocessing, co
   - Clear logging of QC decisions (JSON/YAML)  
   - Deployment-friendly structure  
 
-## Project Structure
-FlowCortex/
-│
-├── flowcortex/
-│ ├── data_preproc/ # Metadata extraction, compensation, cofactor
-│ ├── gating/ # Live/Dead, singlet/doublet, debris filtering
-│ ├── visualization/ # KDE, contour plots, scatter overlays
-│ ├── init.py
-│
-├── data/ # Example FCS/CSV data (gitignored if large)
-├── tests/ # Unit tests for modules
-├── notebooks/ # Jupyter/Colab exploration notebooks
-├── README.md # Project overview (this file)
-├── LICENSE # License file (MIT by default)
-└── requirements.txt # Dependencies
-
-from flowcortex.data_preproc import metadata, compensation, cofactor
-from flowcortex.gating import live_dead, singlet_doublet
-from flowcortex.visualization import plots
-
-# 1. Extract metadata from FCS
-metadata.collect_metadata("/path/to/fcs_folder")
-
-# 2. Apply compensation
-compensation.apply_spillover("/path/to/metadata.csv")
-
-# 3. Estimate cofactors
-cofactor.estimate("/path/to/compensated_csvs")
-
-# 4. Run gating
-live_dead_labels = live_dead.classify("/path/to/cofactor_applied.csv")
-
-# 5. Visualize
-plots.kde_contour(live_dead_labels)
-
 Roadmap
+Add longitudinal batch effect modeling
+Bayesian posterior scoring for uncertain gates
+Integration with FlowSOM/UMAP embeddings
+Web-based UI for interactive gating
 
- Add longitudinal batch effect modeling
-
- Bayesian posterior scoring for uncertain gates
-
- Integration with FlowSOM/UMAP embeddings
-
- Web-based UI for interactive gating
-
-Contributing: Pull requests are welcome! Please open an issue first to discuss what you’d like to change.
+Contributing
+Pull requests are welcome! Please open an issue first to discuss what you’d like to change.
 
 License
 This project is licensed under the MIT License
